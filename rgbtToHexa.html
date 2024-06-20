@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Convertir RGB a Hexadecimal</title>
+    <script>
+        function rgbAHexadecimal(rojo, verde, azul) {
+            if (rojo < 0 || rojo > 255 || verde < 0 || verde > 255 || azul < 0 || azul > 255) {
+                throw new Error("Los valores de rojo, verde y azul deben estar entre 0 y 255");
+            }
+
+            const aHexadecimal = (color) => color.toString(16).padStart(2, '0');
+
+            return "#" + aHexadecimal(rojo) + aHexadecimal(verde) + aHexadecimal(azul);
+        }
+
+        // Ejemplo de uso
+        const rojo = 68;
+        const verde = 12;
+        const azul = 18;
+        const colorHexadecimal = rgbAHexadecimal(rojo, verde, azul);
+        console.log(colorHexadecimal); // Salida en la consola
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
